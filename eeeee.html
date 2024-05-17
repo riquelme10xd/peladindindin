@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Empresa - Productos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        /* Estilos del encabezado */
+        header {
+            background: linear-gradient(90deg, #ff6f61, #d9534f);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            float: left;
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos de las secciones */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        /* Estilos de los productos */
+        .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .producto {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .producto:hover {
+            transform: scale(1.05);
+        }
+
+        .producto img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .producto h3 {
+            margin: 10px 0;
+            font-size: 1.5em;
+            color: #ff6f61;
+        }
+
+        .producto p {
+            margin: 10px 20px;
+            color: #777;
+        }
+
+        .precio {
+            font-size: 20px;
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .oferta {
+            background-color: #ffe0b2;
+            padding: 20px;
+            border: 1px solid #ffca28;
+        }
+
+        .precio-oferta {
+            font-size: 24px;
+            font-weight: bold;
+            color: #dc3545;
+        }
+
+        .precio-normal {
+            text-decoration: line-through;
+            color: #666;
+        }
+
+        /* Estilos del pie de página */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        /* Estilos de los testimonios */
+        .testimonial {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonial p {
+            margin-bottom: 10px;
+            color: #777;
+        }
+
+        .testimonial .autor {
+            font-style: italic;
+            color: #333;
+        }
+
+        /* Estilos del FAQ */
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+
+        /* Estilos de las redes sociales */
+        .redes {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .redes a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .redes a img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .redes a img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Añadiendo fuentes de Google */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mi Empresa</h1>
+            <nav>
+                <ul>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                    <li><a href="#video">Video Publicitario</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#redes-sociales">Redes Sociales</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="productos" class="section">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <!-- Ejemplo de oferta -->
+            <div class="producto oferta">
+                <img src="oferta.jpg" alt="Oferta">
+                <h3>Oferta Especial</h3>
+                <p>Aprovecha nuestra oferta especial por tiempo limitado.</p>
+                <p class="precio-oferta">$9.99 <span class="precio-normal">$15.99</span></p>
+            </div>
+            <!-- Resto de productos -->
+            <div class="productos">
+                <div class="producto">
+                    <img src="shampoo.jpg" alt="Shampoo">
+                    <h3>Shampoo</h3>
+                    <p>Limpia profundamente tu cabello</p>
+                    <p class="precio">$10</p>
+                </div>
+                <div class="producto">
+                    <img src="acondicionador.jpg" alt="Acondicionador">
+                    <h3>Acondicionador</h3>
+                    <p>Hidrata y suaviza tu cabello</p>
+                    <p class="precio">$12</p>
+                </div>
+                <div class="producto">
+                    <img src="jabon.jpg" alt="Jabón">
+                    <h3>Jabón</h3>
+                    <p>Fórmula suave para todo tipo de piel</p>
+                    <p class="precio">$5</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quienes-somos" class="section">
+        <div class="container">
+            <h2>¿Quiénes Somos?</h2>
+            <p>Somos una empresa dedicada a ofrecer productos de cuidado personal de alta calidad.</p>
+        </div>
+    </section>
+
+    <section id="video" class="section">
+        <div class="container">
+            <h2>Video Publicitario</h2>
+            <!-- Inserta aquí el enlace de tu video publicitario de YouTube -->
+            <div style="text-align: center;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TU_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="section">
+        <div class="container">
+            <h2>Testimonios de Clientes</h2>
+            <div class="testimonial">
+                <p>"¡Los productos de Mi Empresa han transformado mi rutina de cuidado personal! Mi piel y cabello nunca han lucido mejor."</p>
+                <p class="autor">- María G., Cliente Satisfecha</p>
+            </div>
+            <div class="testimonial">
+                <p>"Estoy encantado con la calidad y eficacia de los productos. ¡Definitivamente los recomendaría a amigos y familiares!"</p>
+                <p class="autor">- Juan P., Cliente Feliz</p>
+            </div>
+            <!-- Puedes agregar más testimonios aquí -->
+        </div>
+    </section>
+
+    <section id="faq" class="section">
+        <div class="container">
+            <h2>Preguntas Frecuentes (FAQ)</h2>
+            <div class="faq-item">
+                <h3>¿Cuáles son las opciones de envío?</h3>
+                <p>Nuestro sitio web ofrece envío estándar y express. Para obtener más detalles, consulta nuestra página de envíos.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Qué métodos de pago aceptan?</h3>
+                <p>Aceptamos tarjetas de crédito/débito, PayPal y transferencia bancaria como métodos de pago seguros.</p>
+            </div>
+            <!-- Puedes agregar más preguntas y respuestas aquí -->
+        </div>
+    </section>
+
+    <section id="redes-sociales" class="section">
+        <div class="container">
+            <h2>Síguenos en Redes Sociales</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/miempresa" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+                <a href="https://twitter.com/miempresa" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/miempresa" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Dirección: Calle Principal 123</p>
+            <p>Teléfono: 123-456-789</p>
+            <p>Email: info@miempresa.com</p>
+            <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
